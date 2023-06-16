@@ -52,9 +52,9 @@ const form = document.forms.addressForm;
 
 form.addEventListener("submit", function (evt) {
   evt.preventDefault();
-  const address = form.elements.address.value;
   addressArr.push(address);
   const rowElement = createRow(addressArr.indexOf(address), address);
   document.querySelector("table").append(rowElement);
   form.elements.address.value = "";
 });
+
